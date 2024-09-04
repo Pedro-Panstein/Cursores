@@ -252,3 +252,27 @@ body {
 #grab { cursor: grab; }
 
 #grabbing { cursor: grabbing; }
+
+#alias { cursor: alias; }
+
+#copy { cursor: copy; }
+
+#cell { cursor: cell; }
+
+#not-allowed { cursor: not-allowed; }
+
+#no-drop { cursor: no-drop; }
+
+#zoom-in { cursor: zoom-in; }
+
+#zoom-out { cursor: zoom-out; }
+
+#context-menu { cursor: context-menu; }
+
+#col-resize { cursor: col-resize; }
+
+#row-resize { cursor: row-resize; }
+
+#vertical-text { cursor: vertical-text; }
+
+#all-scroll { cursor: all-scroll; }

@@ -18,7 +18,7 @@ menuContent.addEventListener("click", () => {
   sidebar.classList.toggle("hidden")
   background.classList.toggle("hidden")
   if (overflow.style.overflowY === "hidden") {
-    overflow.style.overflowY = ""; // Volta ao estado padrão
+    overflow.style.overflowY = "";
   } else {
     overflow.style.overflowY = "hidden";
   }
