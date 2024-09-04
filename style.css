@@ -117,7 +117,7 @@ body {
   z-index: 100;
   right: 0px;
   transition: .3s ease-in-out;
-  border-left: 1px solid #00dd9e;
+  /* border-left: 1px solid #00dd9e; */
   box-shadow: -3px 0px 45px -20px #00ffb7a2;
 }
 
