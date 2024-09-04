@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --jetBrains: "JetBrains Mono", monospace;
+  --poppins: "Poppins", system-ui;
+  --background: #151515;
+  --textColor: #00ffb6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--textColor);
+  font-family: var(--poppins);
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    z-index: 1;
+}
+
+#title-css {
+    background-image: linear-gradient(90deg, #A1DDFF, #00A3FF);
+    color: #00ffb6;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px -2px 10px #00A3FF;
+}
+
+.header h1 {
+    background-image: linear-gradient(90deg, #6FFFD6, #00FFB6, #00DD9E);
+    color: #00ffb6;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px -2px 10px #00ffb7a2;
+}
+
+.menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.menu-line {
+    background-color: #00ffb6;
+    padding: 1.5px 10px;
+    width: 15px;
+    border-radius: 50px;
+}
