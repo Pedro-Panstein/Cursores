@@ -3,6 +3,7 @@ AOS.init({
   once: true,
 });
 
+const overflow = document.documentElement;
 const menu1 = document.querySelector(".menu-line1");
 const menu2 = document.querySelector(".menu-line2");
 const menu3 = document.querySelector(".menu-line3");
@@ -16,5 +17,9 @@ menuContent.addEventListener("click", () => {
   menu3.classList.toggle("effect3");
   sidebar.classList.toggle("hidden")
   background.classList.toggle("hidden")
-  console.log("a");
+  if (overflow.style.overflowY === "hidden") {
+    overflow.style.overflowY = ""; // Volta ao estado padrão
+  } else {
+    overflow.style.overflowY = "hidden";
+  }
 });
