@@ -17,9 +17,9 @@ menuContent.addEventListener("click", () => {
   menu3.classList.toggle("effect3");
   sidebar.classList.toggle("hidden")
   background.classList.toggle("hidden")
-  if (overflow.style.overflowY === "hidden") {
-    overflow.style.overflowY = "";
-  } else {
-    overflow.style.overflowY = "hidden";
-  }
+  // if (overflow.style.overflowY === "hidden") {
+  //   overflow.style.overflowY = "";
+  // } else {
+  //   overflow.style.overflowY = "hidden";
+  // }
 });

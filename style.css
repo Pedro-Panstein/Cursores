@@ -93,7 +93,7 @@ body {
   transition: .3s ease-in-out;
   transform: rotate(45deg);
   position: relative;
-  top: 7px;
+  top: 8px;
   z-index: 101;
 }
 
@@ -117,7 +117,7 @@ body {
   z-index: 100;
   right: 0px;
   transition: .3s ease-in-out;
-  /* border-left: 1px solid #00dd9e; */
+  border-left: 1px solid #00dd9e;
   box-shadow: -3px 0px 45px -20px #00ffb7a2;
 }
 
@@ -147,7 +147,6 @@ body {
 
 .cursor-box:hover {
   transition: .3s linear all;
-  transform: scale(1.01);
   box-shadow: 1px 1px 51px -20px rgba(0, 255, 183, 0.67);
 }
 
@@ -276,3 +275,32 @@ body {
 #vertical-text { cursor: vertical-text; }
 
 #all-scroll { cursor: all-scroll; }
+
+@media screen and (min-width: 728px) {
+  .cursor-box {
+    flex-direction: row;
+    width: 700px;
+  }
+
+  .cursor-box div h1 {
+    text-align: start;
+    width: auto;
+    margin-left: 15px;
+  }
+  
+  .cursor-box div h4 {
+    text-align: start;
+    margin: 10px 15px;
+  }
+  
+  .cursor-box div p {
+      text-align: justify;
+      margin: 15px 20px 10px 15px;
+      width: 320px;
+  }
+
+  .cursor-box img {
+    height: 200px;
+    width: 300px;
+  }
+}
