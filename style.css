@@ -75,6 +75,7 @@ body {
   padding: 20px;
   width: 350px;
   margin: 40px auto;
+  border: .2px solid rgba(0, 255, 183, 0.67);
   box-shadow: 1px 1px 51px -33px rgba(0, 255, 183, 0.67);
 }
 
@@ -86,7 +87,7 @@ body {
 
 .cursor-box div h1 {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   width: 200px;
   margin: 0 auto;
   font-weight: 400;
@@ -140,34 +141,48 @@ body {
 }
 
 /* CURSORES */
-#default {
-  cursor: default;
-}
+#default { cursor: default; }
 
-#none {
-  cursor: none;
-}
+#none { cursor: none; }
 
-#pointer {
-  cursor: pointer;
-}
+#pointer { cursor: pointer; }
 
-#text {
-  cursor: text;
-}
+#text { cursor: text; }
 
-#wait {
-  cursor: wait;
-}
+#wait { cursor: wait; }
 
-#help {
-  cursor: help;
-}
+#help { cursor: help; }
 
-#progress {
-  cursor: progress;
-}
+#progress { cursor: progress; }
 
-#crosshair {
-  cursor: crosshair;
-}
+#crosshair { cursor: crosshair; }
+
+#n-resize { cursor: n-resize; }
+
+#s-resize { cursor: s-resize; }
+
+#e-resize { cursor: e-resize; }
+
+#w-resize { cursor: w-resize; }
+
+#ne-resize { cursor: ne-resize; }
+
+#nw-resize { cursor: nw-resize; }
+
+#se-resize { cursor: se-resize; }
+
+#sw-resize { cursor: sw-resize; }
+
+#ew-resize { cursor: ew-resize; }
+
+#ns-resize { cursor: ns-resize; }
+
+#nesw-resize { cursor: nesw-resize; }
+
+#nwse-resize { cursor: nwse-resize; }
+
+#move { cursor: move; }
+
+#grab { cursor: grab; }
+
+#grabbing { cursor: grabbing; }
