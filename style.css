@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -111,6 +112,8 @@ body {
 .cursor-box img {
   height: 200px;
   width: 300px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .cursor-code {
@@ -137,6 +140,14 @@ body {
 }
 
 /* CURSORES */
+#default {
+  cursor: default;
+}
+
+#none {
+  cursor: none;
+}
+
 #pointer {
   cursor: pointer;
 }
