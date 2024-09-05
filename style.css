@@ -180,6 +180,14 @@ body {
   width: 300px;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.cursor-box img:hover {
+  transition: .2s linear all;
+  transform: scale(1.01);
+  border-color: #00ffb6;
+  box-shadow: 1px 1px 51px -30px rgba(0, 255, 183, 0.67);
 }
 
 .cursor-code {
@@ -290,7 +298,7 @@ body {
   
   .cursor-box div h4 {
     text-align: start;
-    margin: 10px 15px;
+    margin: 10px 0px 10px 15px;
   }
   
   .cursor-box div p {
@@ -302,5 +310,16 @@ body {
   .cursor-box img {
     height: 200px;
     width: 300px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .desktop {
+    display: flex;
+  }
+
+  .title-cursor-content, .frist-title-cursor-content {
+    margin-top: 150px;
+    font-size: 50px;
   }
 }
