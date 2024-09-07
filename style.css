@@ -316,6 +316,12 @@ body {
 @media screen and (min-width: 1700px) {
   .desktop {
     display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .cursor-box {
+    margin: 40px 20px;
   }
 
   .title-cursor-content, .frist-title-cursor-content {
