@@ -34,10 +34,6 @@ body {
   z-index: 1;
 }
 
-.overflow {
-  overflow-y: hidden;
-}
-
 #title-css {
   background-image: linear-gradient(90deg, #a1ddff, #00a3ff);
   color: #00ffb6;
@@ -79,6 +75,21 @@ body {
   top: 0px;
   right: 0px;
   left: 0px;
+}
+
+#theme {
+  position: absolute;
+  bottom: 100px;
+  right: 0px;
+  left: 0px;
+  width: 120px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  font-size: 16px;
+  border: 2px solid #00ffb6;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #00ffb6;
 }
 
 .menu-line1, .menu-line2, .menu-line3 {
