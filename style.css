@@ -32,6 +32,7 @@ body {
   font-size: 14px;
   padding: 20px;
   z-index: 1;
+  top: 10px;
 }
 
 #title-css {
@@ -71,7 +72,7 @@ body {
   width: 100%;
   z-index: 20;
   background-color: #00000093;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   left: 0px;
@@ -90,6 +91,7 @@ body {
   border-radius: 8px;
   background-color: transparent;
   color: #00ffb6;
+  cursor: pointer;
 }
 
 .menu-line1, .menu-line2, .menu-line3 {
@@ -103,8 +105,9 @@ body {
 .effect1 {
   transition: .3s ease-in-out;
   transform: rotate(45deg);
-  position: relative;
-  top: 8px;
+  position: fixed;
+  top: 38px;
+  right: 20px;
   z-index: 101;
 }
 
@@ -117,13 +120,16 @@ body {
   transition: .2s ease-in-out;
   transform: rotate(-45deg);
   z-index: 101;
+  position: fixed;
+  top: 38px;
+  right: 20px;
 }
 
 .sidebar {
   background-color: #2b2b2b;
   height: 100vh;
   width: 250px;
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 100;
   right: 0px;
@@ -245,10 +251,12 @@ body {
 }
 
 .lightbox-image {
+  position: absolute;
   max-width: 700px;
   height: 500px;
   width: 800px;
   border-radius: 8px;
+  z-index: 200;
 }
 
 .lightbox-close {
