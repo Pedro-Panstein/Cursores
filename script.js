@@ -22,6 +22,11 @@ menuContent.addEventListener("click", () => {
 //TROCAR TEMA
 const theme = document.getElementById("theme");
 
+theme.addEventListener("click", () => {
+  const root = document.documentElement;
+  const darkTheme = getComputedStyle(root).getPropertyValue("--background") === "#151515";
+})
+
 //LIGHTBOX
 const images = document.querySelectorAll(".cursor-box img");
 const lightbox = document.querySelector(".lightbox");
