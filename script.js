@@ -21,18 +21,56 @@ menuContent.addEventListener("click", () => {
 
 //TROCAR TEMA
 const theme = document.getElementById("theme");
+const root = document.documentElement;
 
+// Função para aplicar o tema escuro
+function setDarkTheme() {
+  root.style.setProperty("--background", "#2b2b2b");
+  root.style.setProperty("--textColor", "#00ffb6");
+  root.style.setProperty("--cursor-box-background", "#333");
+  root.style.setProperty("--shadow", "#00ffb7a2");
+  root.style.setProperty("--shadow2", "rgba(0, 255, 183, 0.67)");
+}
+
+// Função para aplicar o tema claro
+function setLightTheme() {
+  root.style.setProperty("--background", "#ddd");
+  root.style.setProperty("--textColor", "#333");
+  root.style.setProperty("--cursor-box-background", "#f5f5f5");
+  root.style.setProperty("--shadow", "#3333333a");
+  root.style.setProperty("--shadow2", "#2b2b2b9b");
+}
+
+// Checar o tema no localStorage ao carregar a página
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    setDarkTheme();
+  } else {
+    setLightTheme();
+  }
+});
+
+// Alternar tema ao clicar no botão
 theme.addEventListener("click", () => {
-  const root = document.documentElement;
-  const darkTheme = getComputedStyle(root).getPropertyValue("--background") === "#151515";
-})
+  const darkTheme = getComputedStyle(root).getPropertyValue("--background") === "#2b2b2b";
+
+  if (darkTheme) {
+    setLightTheme();
+    localStorage.setItem("theme", "light"); // Salvar tema claro no localStorage
+  } else {
+    setDarkTheme();
+    localStorage.setItem("theme", "dark"); // Salvar tema escuro no localStorage
+  }
+});
+
 
 //LIGHTBOX
 const images = document.querySelectorAll(".cursor-box img");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxClose = document.querySelector(".lightbox-close");
-const lightboxContent = document.querySelector(".lightbox-content");
+const body = document.querySelector("body");
 
 images.forEach((e) => {
   e.addEventListener("click", () => {
@@ -43,14 +81,12 @@ images.forEach((e) => {
   });
 });
 
-lightbox.addEventListener("click", (e) => {
-    lightbox.style.display = "none";
-});
-
-lightboxContent.addEventListener("click", (e) => {
-  lightbox.style.display = "flex";
-});
-
 lightboxClose.addEventListener("click", () => {
   lightbox.style.display = "none";
+});
+
+body.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox.style.display === "flex") {
+    lightbox.style.display = "none";
+  }
 });
