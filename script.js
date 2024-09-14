@@ -29,6 +29,7 @@ function setDarkTheme() {
   root.style.setProperty("--cursor-box-background", "#333");
   root.style.setProperty("--shadow", "#00ffb7a2");
   root.style.setProperty("--shadow2", "rgba(0, 255, 183, 0.67)");
+  root.style.setProperty("--stroke", "0px #000")
 }
 
 function setLightTheme() {
@@ -37,6 +38,7 @@ function setLightTheme() {
   root.style.setProperty("--cursor-box-background", "#f5f5f5");
   root.style.setProperty("--shadow", "#3333333a");
   root.style.setProperty("--shadow2", "#2b2b2b9b");
+  root.style.setProperty("--stroke", "1px #000")
 }
 
 window.addEventListener("DOMContentLoaded", () => {
