@@ -41,10 +41,10 @@ function setLightTheme() {
 
 window.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    setDarkTheme();
-  } else {
+  if (savedTheme === "light") {
     setLightTheme();
+  } else {
+    setDarkTheme();
   }
 });
 
