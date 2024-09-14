@@ -23,7 +23,6 @@ menuContent.addEventListener("click", () => {
 const theme = document.getElementById("theme");
 const root = document.documentElement;
 
-// Função para aplicar o tema escuro
 function setDarkTheme() {
   root.style.setProperty("--background", "#2b2b2b");
   root.style.setProperty("--textColor", "#00ffb6");
@@ -32,7 +31,6 @@ function setDarkTheme() {
   root.style.setProperty("--shadow2", "rgba(0, 255, 183, 0.67)");
 }
 
-// Função para aplicar o tema claro
 function setLightTheme() {
   root.style.setProperty("--background", "#ddd");
   root.style.setProperty("--textColor", "#333");
@@ -41,7 +39,6 @@ function setLightTheme() {
   root.style.setProperty("--shadow2", "#2b2b2b9b");
 }
 
-// Checar o tema no localStorage ao carregar a página
 window.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "dark") {
@@ -51,16 +48,15 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Alternar tema ao clicar no botão
 theme.addEventListener("click", () => {
   const darkTheme = getComputedStyle(root).getPropertyValue("--background") === "#2b2b2b";
 
   if (darkTheme) {
     setLightTheme();
-    localStorage.setItem("theme", "light"); // Salvar tema claro no localStorage
+    localStorage.setItem("theme", "light");
   } else {
     setDarkTheme();
-    localStorage.setItem("theme", "dark"); // Salvar tema escuro no localStorage
+    localStorage.setItem("theme", "dark");
   }
 });
 
