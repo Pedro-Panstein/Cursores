@@ -22,6 +22,8 @@
   --shadow: #00ffb7a2;
   --shadow2: rgba(0, 255, 183, 0.67);
   --stroke: 0px #000;
+  --font-size: 18px;
+  --hr: #00ffb754;
 }
 
 body {
@@ -31,12 +33,14 @@ body {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   padding: 20px;
   z-index: 1;
-  top: 10px;
 }
 
 #title-css {
@@ -88,16 +92,17 @@ body {
   bottom: 100px;
   right: 0px;
   left: 0px;
-  width: 120px;
+  width: 140px;
   margin: 0 auto;
   padding: 20px 10px;
-  font-size: 16px;
+  font-size: var(--font-size);
   border: 2px solid var(--textColor);
   border-radius: 8px;
   background-color: transparent;
   color: var(--textColor);
   cursor: pointer;
   box-shadow: 1px 1px 20px var(--shadow);
+  white-space: nowrap;
 }
 
 .menu-line1,
@@ -146,14 +151,46 @@ body {
   box-shadow: -3px 0px 45px -20px var(--shadow);
 }
 
-.sidebar h1 {
-  position: absolute;
-  top: 100px;
-  right: 25%;
-  left: 25%;
-  width: 50%;
-  font-size: 18px;
+.div-font-content, .div-language-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 100px auto 0px auto;
+  border-bottom: 1px solid var(--hr);
+  width: 90%;
+  padding-bottom: 10px;
+}
+
+.div-language-content {
+  margin-top: 40px;
+}
+
+#change-font {
+  width: 170px;
+  margin-right: 5px;
+  text-align: start;
+  font-size: var(--font-size);
+}
+
+#font-select {
+  outline: none;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: transparent;
   color: var(--textColor);
+  cursor: pointer;
+  border: 2px solid var(--textColor);
+  font-size: var(--font-size);
+}
+
+#font-select:focus {
+  border-color: var(--textColor);
+}
+
+#font-select option {
+  background-color: var(--background);
+  border: 2px solid var(--textColor);
+  padding: 10px;
 }
 
 .cursor-box {
@@ -186,18 +223,19 @@ body {
 }
 
 .cursor-box div h4 {
-  font-size: 20px;
+  font-size: var(--font-size);
   text-align: center;
   margin: 10px 0px;
   font-weight: 500;
   cursor: default;
+  font-size: var(--font-size);
 }
 
 .cursor-box div p {
   text-align: justify;
   width: 92%;
   margin: 15px auto;
-  font-size: 18px;
+  font-size: var(--font-size);
   cursor: default;
 }
 
@@ -220,12 +258,14 @@ body {
   color: #3ab9f0;
   font-family: var(--jetBrains);
   margin: 0px 5px;
+  font-size: var(--font-size);
 }
 
 .variable-name {
   color: #af93da;
   font-family: var(--jetBrains);
   margin: 0px 3px;
+  font-size: var(--font-size);
 }
 
 .title-cursor-content,

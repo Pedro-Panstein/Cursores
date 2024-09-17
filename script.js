@@ -19,6 +19,27 @@ menuContent.addEventListener("click", () => {
   background.classList.toggle("hidden");
 });
 
+//MUDAR A FONTE
+document.addEventListener("DOMContentLoaded", () => {
+  const savedValue = localStorage.getItem("selectedFontSize");
+  const fontSelect = document.getElementById("font-select");
+  const options = document.querySelectorAll("font-select option");
+
+  if (savedValue) {
+    fontSelect.value = savedValue;
+  } else {
+    fontSelect.value = "18";
+  }
+
+  root.style.setProperty("--font-size", `${fontSelect.value}px`)
+
+  fontSelect.addEventListener("change", function () {
+    localStorage.setItem("selectedFontSize", this.value);
+    root.style.setProperty("--font-size", `${this.value}px`)
+  });
+
+});
+
 //TROCAR TEMA
 const theme = document.getElementById("theme");
 const root = document.documentElement;
@@ -29,7 +50,8 @@ function setDarkTheme() {
   root.style.setProperty("--cursor-box-background", "#333");
   root.style.setProperty("--shadow", "#00ffb7a2");
   root.style.setProperty("--shadow2", "rgba(0, 255, 183, 0.67)");
-  root.style.setProperty("--stroke", "0px #000")
+  root.style.setProperty("--stroke", "0px #000");
+  root.style.setProperty("--hr", "#00ffb754");
 }
 
 function setLightTheme() {
@@ -38,7 +60,8 @@ function setLightTheme() {
   root.style.setProperty("--cursor-box-background", "#f5f5f5");
   root.style.setProperty("--shadow", "#3333333a");
   root.style.setProperty("--shadow2", "#2b2b2b9b");
-  root.style.setProperty("--stroke", "1px #000")
+  root.style.setProperty("--stroke", "1px #000");
+  root.style.setProperty("--hr", "#33333354");
 }
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -51,7 +74,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 theme.addEventListener("click", () => {
-  const darkTheme = getComputedStyle(root).getPropertyValue("--background") === "#2b2b2b";
+  const darkTheme =
+    getComputedStyle(root).getPropertyValue("--background") === "#2b2b2b";
 
   if (darkTheme) {
     setLightTheme();
@@ -61,7 +85,6 @@ theme.addEventListener("click", () => {
     localStorage.setItem("theme", "dark");
   }
 });
-
 
 //LIGHTBOX
 const images = document.querySelectorAll(".cursor-box img");
